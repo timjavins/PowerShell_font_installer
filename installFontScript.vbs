@@ -11,6 +11,7 @@ Set oWinFonts = objShell.Namespace(FONTS)
 Set rxTTF = New RegExp
 rxTTF.IgnoreCase = True
 rxTTF.Pattern = "\.ttf$"
+rxTTF.Pattern = "\.otf$"
 
 FOR EACH FontFile IN oSource.Items()
     IF rxTTF.Test(FontFile.Path) THEN   
